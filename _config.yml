@@ -1,0 +1,34 @@
+# Jekyll 設定（GitHub Pages 公開用・最小限）
+# 公式: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
+#
+# このリポジトリは複数アプリの法務文書を公開する想定で構成している。
+# 各アプリの文書は `<app-name>/` サブディレクトリ配下に配置し、Jekyll は
+# ルートの本ファイルを共通設定として使用する（GitHub Pages の制約により
+# `_config.yml` はリポジトリルートのみ許容）。
+
+title: 法務文書
+description: モバイルアプリの法務文書（プライバシーポリシー / 利用規約 / 特定商取引法に基づく表記）
+
+# テーマ（GitHub Pages サポート済テーマから選択）
+# https://pages.github.com/themes/
+theme: jekyll-theme-minimal
+
+# Markdown 処理
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# 自動 link 解決（[テキスト](privacy-policy.md) を .html に自動変換）
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
+
+# 公開対象から除外
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
