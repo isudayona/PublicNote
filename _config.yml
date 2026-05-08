@@ -5,13 +5,12 @@
 # 各アプリの文書は `<app-name>/` サブディレクトリ配下に配置し、Jekyll は
 # ルートの本ファイルを共通設定として使用する（GitHub Pages の制約により
 # `_config.yml` はリポジトリルートのみ許容）。
+#
+# 外部 theme は使わず、独自 `_layouts/default.html` で最小限のクリーン
+# 表示を実現する（外部 theme は site title/description/footer 等の装飾を
+# hardcoded で出力するため、法務文書サイトには不向き）。
 
-title: 法務文書
-description: モバイルアプリの法務文書（プライバシーポリシー / 利用規約 / 特定商取引法に基づく表記）
-
-# テーマ（GitHub Pages サポート済テーマから選択）
-# https://pages.github.com/themes/
-theme: jekyll-theme-minimal
+title: ドキュメント
 
 # Markdown 処理
 markdown: kramdown
